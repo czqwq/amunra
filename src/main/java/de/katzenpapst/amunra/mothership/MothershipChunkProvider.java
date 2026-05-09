@@ -22,11 +22,6 @@ public class MothershipChunkProvider extends ChunkProviderGenerate { // for now,
 
     private static final Logger LOG = LogManager.getLogger(MothershipChunkProvider.class);
 
-    /**
-     * EndlessIDs replaces the vanilla byte biome array with a short array to support more biome IDs.
-     * Calling the vanilla getBiomeArray() when EndlessIDs is present crashes intentionally.
-     * We detect EndlessIDs at class-load time and use its ChunkBiomeHook interface via reflection when available.
-     */
     private static final Method GET_BIOME_SHORT_ARRAY;
 
     static {
